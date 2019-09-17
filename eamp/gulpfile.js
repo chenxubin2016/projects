@@ -12,7 +12,6 @@ gulp.task('clean:Build', function () {
     './build/**/',
   ]);
 });
-// 零零落落零零落落了
 gulp.task('images', function () {
   return gulp.src('./app/views/static/images/**')
     .pipe(gulp.dest('./dist/assets/images/'));

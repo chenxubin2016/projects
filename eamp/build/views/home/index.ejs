@@ -1,0 +1,41 @@
+<div class='main'>
+  <!-- header -->
+  <div class='header-container'>
+    <%- include('../common/header/index', {headerData: appData.headerData}) %>
+  </div>
+
+  <!-- content -->
+  <div class='content-container'>
+    <amp-list credentials="include"
+      width='100'
+      height='100'
+      noloading
+      src='<%- appData.listUrl %>'
+      items='items'
+      layout='responsive'>
+      <div placeholder></div>
+      <template type="amp-mustache">
+          <div class='item'>
+            <div class='info'>
+              <span>{{cityName}}</span>
+              <amp-img src='{{imgUrl}}'
+                width='1080'
+                height='610'
+                layout='responsive'
+                alt={{cityname}}></amp-img>
+            </div>
+          </div>
+      </template>
+    </amp-list>
+  </div>
+
+  <!-- footer -->
+  <div class='footer-container'>
+    <%- include('../common/footer/index', {footerData: appData.footerData}) %>
+  </div>
+
+</div>
+
+
+
+
